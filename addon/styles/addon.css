@@ -1,6 +1,17 @@
+.stupid-switch-wrapper {
+    display: inline-block;
+}
+
 input[type="checkbox"].stupid-switch {
-  position: absolute;
-  margin: 8px 0 0 16px;
+    position: absolute;
+    margin: 8px 0 0 16px;
+}
+
+input[type="checkbox"].stupid-switch + label {
+    position: relative;
+    padding: 5px 0 0 50px;
+    line-height: 2.0em;
+    cursor: pointer;
 }
 
 input[type="checkbox"].stupid-switch + label:before {
@@ -18,18 +29,69 @@ input[type="checkbox"].stupid-switch + label:before {
     transition: all 0.3s;
 }
 
-input.stupid-switch.exclude {
-
+input[type="checkbox"].stupid-switch + label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 24px; /* x*3 */
+    height: 24px; /* x*3 */
+    border-radius: 16px; /* x*2 */
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-input.stupid-switch.deselect {
+input[type="checkbox"].stupid-switch:checked + label:before {
+    background: #55D069;
+}
 
+input[type="checkbox"].stupid-switch + label:hover:after {
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+input[type="checkbox"].stupid-switch:checked + label:after {
+    margin-left: 16px;
+}
+
+.stupid-switch + label > input {
+    width: auto;
+    position: absolute;
+    left: 0px;
+    bottom: 26px;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+}
+
+input[type="checkbox"].stupid-switch.exclude + label:before {
+    background: red;
+}
+
+input[type="checkbox"].stupid-switch.exclude:checked + label:before {
+    background: #fff;
+}
+
+
+input[type="checkbox"].stupid-switch.deselect + label:before {
+    background: #F3F3F3;
+}
+
+input[type="checkbox"].stupid-switch.deselect:checked + label:before {
+    background: #F3F3F3;
+}
+
+input[type="checkbox"].stupid-switch.deselect:checked + label:after {
+    margin-left: 8px;
 }
 
 input.stupid-switch.include {
-
+    /* no need to override */
 }
 
 input.stupid-switch.idle {
-
+    /* for future use, no need to override */
 }

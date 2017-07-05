@@ -1,19 +1,11 @@
-<input type="checkbox" name="exclude" class="stupid-switch exclude" />
-<label class="stupid-switch-label">exclude</label>
-<br>
+{{#if hasBlock}}
+{{else}}
+{{/if}}
 
-
-<input type="checkbox" name="deselect" class="stupid-switch deselect" />
-<label class="stupid-switch-label">deselect</label>
-<br>
-
-
-<input type="checkbox" name="include" class="stupid-switch include" />
-<label class="stupid-switch-label">include</label>
-<br>
-
-
-<input type="checkbox" name="idle" class="stupid-switch idle" />
-<label>idle</label>
-<br>
-{{!-- <label for="checkbox1" class="checkbox-label" data-off="off" data-on="on"></label> --}}
+<div class="stupid-switch-wrapper" {{action 'toggleClick'}}>
+  <input type="checkbox" class="stupid-switch {{name}}"
+    checked={{isChecked}} disabled={{isDisabled}}>
+  <label class="stupid-switch-label">
+    <input type="text" class="stupid-switch-name" value={{name}} title={{title}} disabled>
+  </label>
+</div>

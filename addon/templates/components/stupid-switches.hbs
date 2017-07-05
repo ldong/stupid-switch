@@ -1,0 +1,28 @@
+<br>
+<br>
+<br>
+<br>
+
+{{#if isHover}}
+  {{stupid-switch
+    name="exclude"
+    isChecked=false
+    isDisabled=true
+    onClick=(action 'toggleExclude')}}
+
+  {{stupid-switch
+    name="deselect"
+    isDisabled=true
+    onClick=(action 'toggleDeselect')}}
+
+  {{stupid-switch
+    name="include"
+    isDisabled=true
+    onClick=(action 'toggleInclude')}}
+{{else}}
+  {{stupid-switch
+    name="exclude"
+    isChecked=false
+    isDisabled=true
+    onClick=(action 'toggleExclude')}}
+{{/if}}
