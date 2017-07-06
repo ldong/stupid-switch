@@ -11,26 +11,26 @@ export default Ember.Component.extend({
   },
 
   mouseEnter() {
-    console.log('mouseEnter');
+    Ember.Logger.log('mouseEnter');
     Ember.run.throttle(this, 'handleToggleIsHover', 100);
   },
 
   mouseLeave() {
-    console.log('mouseLeave');
+    Ember.Logger.log('mouseLeave');
     Ember.run.throttle(this, 'handleToggleIsHover', 100);
   },
 
   actions: {
     toggleExclude() {
-      console.log('toggleExclude');
+      Ember.Logger.log('toggleExclude');
     },
 
     toggleDeselect() {
-      console.log('toggleDeselect');
+      Ember.Logger.loglog('toggleDeselect');
     },
 
     toggleInclude() {
-      console.log('toggleInclude');
+      Ember.Logger.log('toggleInclude');
     }
   }
 });

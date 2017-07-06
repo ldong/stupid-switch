@@ -37,7 +37,7 @@ export default Ember.Component.extend({
 
   actions: {
     toggleClick() {
-      console.log('toggleClick');
+      Ember.Logger.log('toggleClick');
       if(!this.isDestroyed && !this.get('isDisabled')) {
         this.toggleProperty('isChecked');
         if (typeof this.onClick === 'function') {
