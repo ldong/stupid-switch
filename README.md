@@ -1,13 +1,17 @@
-# stupid-switch
+# Stupid-switch
 
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+`ember install git+ssh://git@github.com:ldong/stupid-switch.git`
+
+## Dev
+* `git clone github.com:ldong/stupid-switch.git` this repository
 * `cd stupid-switch`
 * `npm install`
 * `bower install`
+
 
 ## Running
 
